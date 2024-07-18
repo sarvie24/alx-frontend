@@ -1,0 +1,91 @@
+/* menu btn */
+.header .menu-btn {
+  display: none;
+}
+
+/* Target navbar-menu class when menu-btn is checked */
+.header .menu-btn:checked ~ .navbar-menu {
+  display: block;
+}
+
+/* Target nav class inside navbar-menu when menu-btn is checked */
+.header .menu-btn:checked ~ .navbar-menu .nav {
+  max-height: 100%;
+  overflow: inherit;
+}
+
+/* Section HERO section */
+.section-hero {
+  margin: -0.1rem 0;
+}
+
+/* Target hero-homepage class inside section-hero */
+.section-hero .hero-homepage {
+  background-position: 85% 0;
+}
+
+/* Target section-body class inside section-hero */
+.section-hero .section-body {
+  padding: 2rem;
+}
+
+/* menu btn */
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+/* Target before state of navicon when menu-btn is checked */
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+/* Target after state of navicon when menu-btn is checked */
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+/* Target before and after states of navicon when menu-btn is checked */
+.header .menu-btn:checked ~ .menu-icon .navicon:before,
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  top: 0;
+}
+
+/* Media query for max-width: 767px */
+@media (max-width: 767px) {
+  :root {
+    --header-padding: 2rem 0 0; /* Redefine header-padding variable */
+  }
+
+  .header {
+    background: var(--color-black);
+  }
+
+  .header-container {
+    flex-wrap: wrap;
+    padding: 0 1.5rem;
+  }
+
+  .header .menu-icon {
+    display: block;
+  }
+}
+
+/* Media query for max-width: 480px */
+@media (max-width: 480px) {
+  .header-logo {
+    flex-basis: 70%;
+  }
+}
+
+/* Media query for min-width: 481px and max-width: 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+  .header-logo {
+    flex-basis: 79%;
+  }
+
+  /* Hide the menu icon on desktop */
+  .header .menu-icon {
+    display: none;
+  }
+}
+
